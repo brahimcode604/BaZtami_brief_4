@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
+     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 
 </head>
@@ -19,9 +19,9 @@
 <header class="flex justify-between items-center bg-white shadow-md px-5 py-4 md:px-12 sticky top-0 z-40">
 
   <!-- Partie gauche : Logo + titre -->
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-2">
     <img src="image/ChatGPT Image 28 oct. 2025, 10_40_24.png" alt="logo"
-         class="w-14 h-12.1 object-contain">
+         class="w-14 h-12.1 object-contain"  id="image">
     
     <div>
       <h2 class="text-2xl font-bold text-blue-800">Baztami</h2>
@@ -30,26 +30,44 @@
   </div>
 
   <!-- Partie droite : Icônes -->
-  <div class="flex items-center gap-5 text-gray-600 text-xl">
-    <button class=" transition">
+  <div class="flex items-center gap-6 text-gray-800 text-xl w-18 " >
+    <button class=" transition"  id="mode">
       <i class="fa-solid fa-moon"></i>
     </button>
 
-    <button class="hover:text-blue-700 transition">
-      <i class="fa-regular fa-circle-user"></i>
+    <button class="hover:text-blue-700 transition"  id="user_cont">
+      <i class="fa-regular fa-circle-user " ></i>
     </button>
   </div>
 
 </header>
 
+<div class="fragment_cont max-w-md mx-auto mt-10 bg-white shadow-lg rounded-2xl p-2 flex flex-col gap-4" id="FRAGMENT_control">
 
-<div  class="fragment_cont">
+  <!-- Section Profil -->
+  <div class="flex items-center gap-4 border-b pb-4">
+    <img src="image/ChatGPT Image 28 oct. 2025, 10_40_24.png" alt="profile"
+         class="w-20 h-20 rounded-full border-2 border-blue-500 object-cover">
+    
+    <div>
+      <h2 class="text-xl font-bold text-gray-800">Brahim EL BAHLOUL</h2>
+      <p class="text-gray-500 text-sm">b.elbahloul6370@uca.ac.ma</p>
+    </div>
+  </div>
 
-    <input type="text" name="" id="">
+  <!-- Section Boutons -->
+  <div class="flex justify-between items-center gap-4">
+    
+    <button class="flex items-center justify-center gap-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Logout
+    </button>
 
-
-
-
+    <button class="flex items-center justify-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+      <i class="fa-solid fa-user-plus"></i>
+      Autre compte
+    </button>
+  </div>
 
 </div>
 
@@ -57,8 +75,8 @@
 
 <main>
 
-
-
+    
+   
 
 
 
