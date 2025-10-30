@@ -1,5 +1,6 @@
 let btn_user = document.getElementById('user_cont');
 let fragment = document.getElementById('FRAGMENT_control');
+fragment.style.display = 'none';
 
 if (btn_user && fragment) {
     btn_user.addEventListener('click', function() {
@@ -41,4 +42,35 @@ if (image) {
         }
     });
 }
+
+
+
+let income1 = document.getElementById('incremonte_montant');
+let expense = document.getElementById('decriment_montant');
+
+let description = document.getElementById('description');
+let montant = document.getElementById('amount');
+
+let    total_income=0,total_expenss=0,net_bane=0;
+
+let     tansaction={
+
+        description ,
+        amount,
+        dat_e
+         
+
+};
+
+
+ income1.addEventListener('click', function() {
+          
+         
+    });
+
+
+
+
+
+
 
