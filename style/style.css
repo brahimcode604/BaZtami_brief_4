@@ -15,8 +15,29 @@
 
 
 
+.scrolhistorique{
 
 
+width: 50%;
+
+height: 60vh;
+ 
+   overflow-y: auto; /* Scroll vertical automatique */
+    max-height: 400px; /* Hauteur maximale pour déclencher le scroll */
+    
+    /* Style personnalisé de la scrollbar */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #c1c1c1 #f1f1f1; /* Firefox */
+
+
+ 
+
+}
+
+
+
+
+ 
 
 
 
