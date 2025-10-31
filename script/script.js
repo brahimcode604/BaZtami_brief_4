@@ -504,7 +504,7 @@ function afficherHistorique(transactions) {
                     </h3>
                     <button 
                         id="btn-supprimer-historique" 
-                        class="bg-red-500  text-white px-4 py-2 rounded-lg hover:bg-red-600 transition flex items-center gap-2"
+                        class="bg-red-500  md:text-xs text-white px-4 py-2 rounded-lg hover:bg-red-600 transition flex items-center gap-2"
                     >
                         <i class="fas fa-trash"></i>
                         Tout supprimer
