@@ -240,7 +240,10 @@ function afficherPopupModification(transaction) {
     
     document.body.appendChild(popup);
     
+
     // Événements
+
+
     document.getElementById('btn-fermer-modification').addEventListener('click', function() {
         document.body.removeChild(popup);
     });
@@ -324,6 +327,7 @@ function sauvegarderModification(transactionId) {
     
     console.log('✅ Transaction modifiée:', transactions[transactionIndex]);
 }
+
 
 // ==================== FONCTIONS D'ACTION ====================
 
@@ -581,3 +585,8 @@ document.addEventListener('click', function(e) {
         supprimerHistoriqueComplet();
     }
 });
+
+
+
+
+
