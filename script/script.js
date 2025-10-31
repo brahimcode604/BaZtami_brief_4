@@ -229,12 +229,28 @@ function afficherHistorique(transactions) {
     } else {
         historiqueContainer.innerHTML = `
             <div class="bg-white rounded-2xl p-6">
+            
+            <div class="flex justify-between items-center">
                 <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">
                     Historique des Transactions
                     <span class="text-sm font-normal text-gray-500 ml-2">
                         (${transactions.length} transaction${transactions.length > 1 ? 's' : ''})
                     </span>
+                     
                 </h3>
+
+                   
+<button 
+            id="btn-supprimer-historique" 
+            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-500 transition"
+        >
+            <i class="fas fa-trash "></i>
+            Supprimer
+        </button>
+                    
+</div>
+
+                     
                 <div class="space-y-3 max-h-96 overflow-y-auto">
                     ${transactions.slice().reverse().map(transaction => `
                         <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition ${
@@ -244,7 +260,7 @@ function afficherHistorique(transactions) {
                                 <div class="w-10 h-10 rounded-full flex items-center justify-center ${
                                     transaction.type === 'income' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
                                 }">
-                                    <i class="fas ${transaction.type === 'income' ? 'fa-arrow-down' : 'fa-arrow-up'}"></i>
+                                    <i class="fas ${transaction.type === 'income' ?'fa-arrow-up'  : 'fa-arrow-down'}"></i>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-gray-800">${transaction.description}</p>
@@ -266,3 +282,42 @@ function afficherHistorique(transactions) {
         `;
     }
 }
+
+
+
+ 
+// Fonction pour supprimer tout l'historique
+function supprimerHistoriqueComplet() {
+    if (confirm('Êtes-vous sûr de vouloir supprimer tout l\'historique ? Cette action est irréversible.')) {
+        // Réinitialiser les variables
+        transactions = [];
+        total_income = 0;
+        total_expenses = 0;
+        net_balance = 0;
+        
+        // Mettre à jour l'affichage
+        mettreAJourAffichage();
+        
+        
+        // Sauvegarder les changements (historique vide)
+        sauvegarderTransactions();
+        
+        console.log('🗑️ Historique supprimé avec succès');
+         
+    }
+}
+
+  // Attacher l'événement au parent (qui existe toujours)
+document.addEventListener('click', function(e) {
+    // Vérifier si le clic vient du bouton de suppression
+    if (e.target && e.target.id === 'btn-supprimer-historique') {
+        supprimerHistoriqueComplet();
+        afficherHistorique(transactions);
+    }
+    
+   
+});
+
+
+
+
